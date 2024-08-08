@@ -1,0 +1,36 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [main, feature-security]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [main, feature-security]
+  
+jobs:
+  build-unitest:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+        cache: gradle
+
+    - name: Build with Gradle
+      run: ./gradlew build --no-daemon
+
+    - name: Run unit tests
+      run: ./gradlew test --no-daemon
+
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: build/test-results/test/
