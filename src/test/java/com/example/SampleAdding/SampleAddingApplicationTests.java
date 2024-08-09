@@ -12,12 +12,12 @@ class SampleAddingApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test 
-	void FailTestCase() {
-       int result = SampleAddingApplication.getSum(5, 4);
-       int expected = 28;
-       assertEquals(expected,result);
-    }
+	// @Test 
+	// void FailTestCase() {
+    //    int result = SampleAddingApplication.getSum(5, 4);
+    //    int expected = 28;
+    //    assertEquals(expected,result);
+    // }
     
     @Test 
 	void getSum() {
