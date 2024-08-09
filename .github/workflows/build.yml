@@ -25,12 +25,12 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build --no-daemon
       shell: bash
-      working-directory: src/main/java
+      working-directory: .
 
     - name: Run unit tests
       run: ./gradlew test --no-daemon
       shell: bash
-      working-directory: src/test/java
+      working-directory: .
 
     - name: Upload Test Results
       if: always()
