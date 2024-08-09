@@ -14,7 +14,7 @@ class SampleAddingApplicationTests {
 
 	// @Test 
 	// void FailTestCase() {
-    //    int result = SampleAddingApplication.getSum(11, 12);
+    //    int result = SampleAddingApplication.getSum(5, 4);
     //    int expected = 28;
     //    assertEquals(expected,result);
     // }
