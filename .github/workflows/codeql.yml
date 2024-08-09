@@ -41,7 +41,7 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build --no-daemon
-      working-directory: .
+      working-directory: .src/main/java
     
     # Run CodeQL Analysis for each microservice/module
     - name: Perform CodeQL Analysis
